@@ -48,7 +48,6 @@ public class Main {
      * 2. 将获得的信息创建为对象并放入stuList中
      */
     public static void addStu() {
-//        System.out.println("add stu");
         Scanner in = new Scanner(System.in);
         System.out.println("add please input student ID:");
 
@@ -63,19 +62,19 @@ public class Main {
                     continue loop;
                 }
             }
-            break ;
+            break;
         }
 
-        InputInfo(Id);
-//        System.out.println("please input student name:");
-//        String name = in.next();
-//        System.out.println("please input student age:");
-//        int age = in.nextInt();
-//        System.out.println("please input student birthday");
-//        String birthday = in.next();
-//
-//        stuList.add(new Student(Id, name, age, birthday));
-//        stuList.add(new Student(stuId, name, age, birthday));
+//        InputInfo();
+
+        System.out.println("please input student name:");
+        String name = in.next();
+        System.out.println("please input student age:");
+        int age = in.nextInt();
+        System.out.println("please input student birthday");
+        String birthday = in.next();
+
+        stuList.add(new Student(Id, name, age, birthday));
 
     }
 
@@ -104,7 +103,6 @@ public class Main {
      * 查找学号，如果存在，则remove。
      */
     public static void deleteStu() {
-        System.out.println("please input the studentID that you wan to remove");
         int index = getIndex();
         stuList.remove(index);
     }
@@ -148,25 +146,32 @@ public class Main {
         return index;
     }
 
-    public static void InputInfo(String stuId) {
-        Scanner in = new Scanner(System.in);
-
-        System.out.println("please input name:");
-        String name = in.next();
-        System.out.println("please input age:");
-        int age = in.nextInt();
-        System.out.println("please input birthday");
-        String birthday = in.next();
-
-        stuList.add(new Student(stuId, name, age, birthday));
-
-//        System.out.println("input name");
-//        stuList.get(getIndex()).setName(in.nextLine());
-//        System.out.println("input age");
-//        stuList.get(getIndex()).setAge(in.nextInt());
-//        System.out.println("input birthday");
-//        in.nextLine();
-//        stuList.get(getIndex()).setBirthday(in.nextLine());
+//    public static void InputInfo() {
 //
-    }
+////        Scanner in = new Scanner(System.in);
+////        System.out.println("add please input student ID:");
+////        String Id;
+////        loop:
+////        while (true) {
+////            Id = in.nextLine();
+////            for (Student s : stuList) {
+////                // if matches, continue the loop.
+////                if (Id.equals(s.getStuId())) {
+////                    System.out.println("Student ID Exists, please try again~~");
+////                    continue loop;
+////                }
+////            }
+////            break;
+////        }
+////
+////        System.out.println("please input name:");
+////        String name = in.next();
+////        System.out.println("please input age:");
+////        int age = in.nextInt();
+////        System.out.println("please input birthday");
+////        String birthday = in.next();
+////
+////        stuList.add(new Student(Id, name, age, birthday));
+//
+//    }
 }
