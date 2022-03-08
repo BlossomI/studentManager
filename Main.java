@@ -65,7 +65,6 @@ public class Main {
             break;
         }
 
-//        InputInfo();
 
         System.out.println("please input student name:");
         String name = in.next();
@@ -84,11 +83,8 @@ public class Main {
     public static void updateStu() {
         Scanner in = new Scanner(System.in);
 
-        // get name of id user inputted
-//        System.out.println(stuList.get(getIndex()).getName());
         int index = getIndex();
         Student s = stuList.get(index);
-
 
         System.out.println("input name");
         s.setName(in.nextLine());
@@ -145,33 +141,4 @@ public class Main {
         }
         return index;
     }
-
-//    public static void InputInfo() {
-//
-////        Scanner in = new Scanner(System.in);
-////        System.out.println("add please input student ID:");
-////        String Id;
-////        loop:
-////        while (true) {
-////            Id = in.nextLine();
-////            for (Student s : stuList) {
-////                // if matches, continue the loop.
-////                if (Id.equals(s.getStuId())) {
-////                    System.out.println("Student ID Exists, please try again~~");
-////                    continue loop;
-////                }
-////            }
-////            break;
-////        }
-////
-////        System.out.println("please input name:");
-////        String name = in.next();
-////        System.out.println("please input age:");
-////        int age = in.nextInt();
-////        System.out.println("please input birthday");
-////        String birthday = in.next();
-////
-////        stuList.add(new Student(Id, name, age, birthday));
-//
-//    }
 }
